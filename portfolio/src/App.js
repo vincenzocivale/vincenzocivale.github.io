@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../src/components/Navbar';
-import Home from '../src/components/Home'; // Import the new Home component
+import Home from '../src/components/Home';
+import About from '../src/components/About';
+import Projects from '../src/components/Projects';
 import './styles/main.css';
 
 const App = () => {
@@ -9,7 +11,8 @@ const App = () => {
       <Navbar />
       <main>
         <Home />
-        {/* Other sections will go here */}
+        <About />
+        <Projects />
       </main>
     </div>
   );

@@ -12,7 +12,7 @@ const Navbar = () => {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li className="nav-cv">
-          <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf">Download CV</a>
+          <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf">Resume</a>
         </li>
       </ul>
     </nav>

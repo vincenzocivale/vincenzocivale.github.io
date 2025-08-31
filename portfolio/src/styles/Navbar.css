@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #0a192f; /* Navy color from the example site */
-  color: #ccd6f6; /* Lightest Slate */
+  background-color: #0a192f;
+  color: #ccd6f6;
   position: fixed;
   width: 100%;
   top: 0;
@@ -15,8 +15,14 @@
 .nav-logo a {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #64ffda; /* Green accent color */
+  color: #64ffda;
   text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-links {
@@ -25,6 +31,7 @@
   gap: 2rem;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; 
 }
 
 .nav-links a {
@@ -35,7 +42,7 @@
 }
 
 .nav-links a:hover {
-  color: #64ffda; /* Hover effect */
+  color: #64ffda;
 }
 
 .nav-cv a {
@@ -48,4 +55,17 @@
 
 .nav-cv a:hover {
   background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Media query per schermi più piccoli (es. tablet e smartphone) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-right {
+    gap: 1rem;
+  }
 }

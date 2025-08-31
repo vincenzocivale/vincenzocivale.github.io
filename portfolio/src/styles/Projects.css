@@ -1,0 +1,132 @@
+.projects-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #ccd6f6;
+  margin-bottom: 3rem;
+}
+
+.projects-number {
+  color: #64ffda;
+  font-family: 'SF Mono', monospace;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* Stile per le singole card di progetto */
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #112240;
+}
+
+.project-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-image-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.project-image {
+  width: 100%;
+  display: block;
+}
+
+.project-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.project-label {
+  color: #64ffda;
+  font-family: 'SF Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #ccd6f6;
+  margin: 0 0 1rem 0;
+}
+
+.project-description {
+  background-color: #0a192f;
+  padding: 1.5rem;
+  border-radius: 4px;
+  color: #a8b2d1;
+}
+
+.project-tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.project-tech-list li {
+  color: #8892b0;
+  font-family: 'SF Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.project-links img:hover {
+  filter: none;
+}
+
+/* Media Query per schermi piccoli (es. tablet e smartphone) */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 50px 2rem;
+  }
+  
+  .project-card {
+    flex-direction: column;
+  }
+  
+  .project-card:nth-child(even) {
+    flex-direction: column;
+  }
+  
+  .project-image-container {
+    max-width: 100%;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-description {
+    background-color: transparent;
+    padding: 0;
+  }
+}
