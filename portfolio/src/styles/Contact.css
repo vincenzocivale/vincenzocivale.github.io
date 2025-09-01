@@ -1,0 +1,75 @@
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: center; /* Centra anche il testo */
+}
+
+.contact-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #ccd6f6;
+  margin-bottom: 2rem;
+}
+
+.contact-number {
+  color: #64ffda;
+  font-family: 'SF Mono', monospace;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.contact-text {
+  color: #8892b0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  /* Assicurati che questo container centri il suo unico elemento */
+  display: flex;
+  justify-content: center; /* Questo centra il pulsante orizzontalmente */
+  align-items: center;
+  /* Rimuoviamo il gap se non ci sono più elementi */
+  /* gap: 1.5rem; */ 
+}
+
+.contact-button {
+  border: 1px solid #64ffda;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  color: #64ffda;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Rimuovi completamente queste regole se non vuoi le icone */
+/*
+.contact-icon img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.contact-icon img:hover {
+  filter: none;
+}
+*/
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 50px 2rem;
+  }
+
+  .contact-heading {
+    flex-direction: column;
+    text-align: center;
+  }
+}
