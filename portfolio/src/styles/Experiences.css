@@ -1,0 +1,124 @@
+.experiences-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.experiences-heading {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #ccd6f6;
+  margin-bottom: 3rem;
+}
+
+.experiences-number {
+  color: #64ffda;
+  font-family: 'SF Mono', monospace;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* Stili per la struttura a tab */
+.experiences-tab {
+  display: flex;
+}
+
+.tab-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  border-left: 2px solid #233554;
+  margin-right: 2rem;
+}
+
+.tab-button {
+  background-color: transparent;
+  color: #8892b0;
+  border: none;
+  border-left: 2px solid transparent;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-button.active {
+  color: #64ffda;
+  background-color: #112240;
+  border-left: 2px solid #64ffda;
+}
+
+.tab-button:hover {
+  background-color: #112240;
+}
+
+.tab-content {
+  flex-grow: 1;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  color: #ccd6f6;
+  margin-bottom: 0.5rem;
+}
+
+.company-name {
+  color: #64ffda;
+}
+
+.job-duration {
+  font-size: 0.8rem;
+  color: #a8b2d1;
+  font-family: 'SF Mono', monospace;
+  margin-bottom: 1rem;
+}
+
+.job-details {
+  list-style-type: none;
+  padding: 0;
+  color: #8892b0;
+}
+
+.job-details li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.job-details li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+/* Media Query per la responsività */
+@media (max-width: 768px) {
+  .experiences-section {
+    padding: 50px 2rem;
+  }
+  
+  .experiences-tab {
+    flex-direction: column;
+  }
+
+  .tab-list {
+    flex-direction: row;
+    border-left: none;
+    border-bottom: 2px solid #233554;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    overflow-x: auto; /* Abilita lo scroll orizzontale se i tab sono troppi */
+  }
+
+  .tab-button {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab-button.active {
+    border-left: none;
+    border-bottom: 2px solid #64ffda;
+  }
+}
