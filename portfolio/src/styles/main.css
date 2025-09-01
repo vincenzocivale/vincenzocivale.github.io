@@ -1,14 +1,14 @@
 /* src/styles/main.css */
 
+/* Dark Theme (PyCharm-inspired) - Default */
 :root {
-  /* Palette Colori */
-  --primary-color: #64ffda;
-  --secondary-color: #ccd6f6;
-  --text-color: #8892b0;
-  --background-color: #0a192f;
-  --card-background: #112240;
-  --border-color: #233554;
-  --link-hover-color: rgba(100, 255, 218, 0.1);
+  --primary-color: #59A2DE; /* Accent color from PyCharm */
+  --secondary-color: #A9B7C6; /* Main text color */
+  --text-color: #808080; /* Secondary text color */
+  --background-color: #2B2B2B; /* Background color */
+  --card-background: #3C3F41; /* Card background */
+  --border-color: #555555; /* A darker gray for borders */
+  --link-hover-color: rgba(255, 198, 109, 0.2);
 
   /* Tipografia - Font Family */
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;
@@ -29,6 +29,18 @@
   --section-padding-mobile: 50px 2rem;
 }
 
+/* Light Theme (PyCharm-inspired) - Optional */
+.light-theme {
+  --primary-color: #007ACC;
+  --secondary-color: #2B2B2B;
+  --text-color: #555555;
+  --background-color: #F5F5F5;
+  --card-background: #EEEEEE;
+  --border-color: #CCCCCC;
+  --link-hover-color: rgba(0, 122, 204, 0.1);
+}
+
+/* Regole globali */
 *,
 *::before,
 *::after {
@@ -46,19 +58,16 @@ body {
   line-height: 1.5;
 }
 
-/* Stili per le sezioni */
 section {
   padding: var(--section-padding-desktop);
   margin: 0 auto;
 }
 
-/* Stile per i link */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Media Query per la responsività globale */
 @media (max-width: 768px) {
   section {
     padding: var(--section-padding-mobile);
