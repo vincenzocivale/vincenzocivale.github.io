@@ -1,35 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../src/components/Navbar';
-import Home from '../src/components/Home';
-import About from '../src/components/About';
-import Experiences from '../src/components/Experiences';
-import Projects from '../src/components/Projects';
-import Contact from '../src/components/Contact';
+import React from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Experiences from './components/Experiences';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Socials from './components/Socials'; // Importa il nuovo componente
+import Email from './components/Email';     // Importa il nuovo componente
 import './styles/main.css';
 
 const App = () => {
-  const [theme, setTheme] = useState('dark'); // Stato per gestire il tema
-
-  useEffect(() => {
-    // Applica la classe 'light-theme' al body se il tema è 'light'
-    document.body.classList.toggle('light-theme', theme === 'light');
-  }, [theme]);
-
-  // Funzione per cambiare il tema
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
   return (
     <div className="App">
-      {/* Passa la funzione e lo stato del tema al componente Navbar */}
-      <Navbar toggleTheme={toggleTheme} currentTheme={theme} />
+      <Navbar />
+      <Socials /> 
+      <Email /> 
       <main>
         <Home />
         <About />
         <Experiences />
         <Projects />
         <Contact />
+        <Socials />
       </main>
     </div>
   );

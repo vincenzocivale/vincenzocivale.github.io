@@ -29,7 +29,7 @@ const About = () => {
             </ul>
           </div>
           <div className="about-image-container">
-            <img src="/assets/images/your-profile.jpg" alt="Profile Picture" className="profile-image" />
+            <img src="/assets/images/cv_profile.jpg" alt="Profile Picture" className="profile-image" />
           </div>
         </div>
       </div>
