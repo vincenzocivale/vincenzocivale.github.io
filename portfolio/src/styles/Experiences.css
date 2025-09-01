@@ -1,25 +1,22 @@
 .experiences-section {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 100px 0;
 }
 
 .experiences-heading {
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  color: #ccd6f6;
+  font-size: var(--font-size-lg);
+  color: var(--secondary-color);
   margin-bottom: 3rem;
 }
 
 .experiences-number {
-  color: #64ffda;
-  font-family: 'SF Mono', monospace;
-  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
   margin-right: 0.5rem;
 }
 
-/* Stili per la struttura a tab */
 .experiences-tab {
   display: flex;
 }
@@ -28,13 +25,13 @@
   display: flex;
   flex-direction: column;
   min-width: 150px;
-  border-left: 2px solid #233554;
+  border-left: 2px solid var(--border-color);
   margin-right: 2rem;
 }
 
 .tab-button {
   background-color: transparent;
-  color: #8892b0;
+  color: var(--text-color);
   border: none;
   border-left: 2px solid transparent;
   padding: 1rem;
@@ -44,13 +41,13 @@
 }
 
 .tab-button.active {
-  color: #64ffda;
-  background-color: #112240;
-  border-left: 2px solid #64ffda;
+  color: var(--primary-color);
+  background-color: var(--card-background);
+  border-left: 2px solid var(--primary-color);
 }
 
 .tab-button:hover {
-  background-color: #112240;
+  background-color: var(--card-background);
 }
 
 .tab-content {
@@ -58,26 +55,26 @@
 }
 
 .job-title {
-  font-size: 1.2rem;
-  color: #ccd6f6;
+  font-size: var(--font-size-sm);
+  color: var(--secondary-color);
   margin-bottom: 0.5rem;
 }
 
 .company-name {
-  color: #64ffda;
+  color: var(--primary-color);
 }
 
 .job-duration {
-  font-size: 0.8rem;
+  font-size: var(--font-size-xxs);
   color: #a8b2d1;
-  font-family: 'SF Mono', monospace;
+  font-family: var(--font-mono);
   margin-bottom: 1rem;
 }
 
 .job-details {
   list-style-type: none;
   padding: 0;
-  color: #8892b0;
+  color: var(--text-color);
 }
 
 .job-details li {
@@ -90,13 +87,13 @@
   content: "▹";
   position: absolute;
   left: 0;
-  color: #64ffda;
+  color: var(--primary-color);
 }
 
 /* Media Query per la responsività */
 @media (max-width: 768px) {
   .experiences-section {
-    padding: 50px 2rem;
+    padding: var(--section-padding-mobile);
   }
   
   .experiences-tab {
@@ -106,10 +103,10 @@
   .tab-list {
     flex-direction: row;
     border-left: none;
-    border-bottom: 2px solid #233554;
+    border-bottom: 2px solid var(--border-color);
     margin-right: 0;
     margin-bottom: 1rem;
-    overflow-x: auto; /* Abilita lo scroll orizzontale se i tab sono troppi */
+    overflow-x: auto;
   }
 
   .tab-button {
@@ -119,6 +116,6 @@
   
   .tab-button.active {
     border-left: none;
-    border-bottom: 2px solid #64ffda;
+    border-bottom: 2px solid var(--primary-color);
   }
 }

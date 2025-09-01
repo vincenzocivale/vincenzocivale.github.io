@@ -1,3 +1,5 @@
+/* src/styles/Home.css */
+
 .home-section {
   display: flex;
   flex-direction: column;
@@ -8,27 +10,42 @@
 }
 
 .home-section .intro {
-  color: #64ffda;
-  font-family: 'SF Mono', monospace;
-  font-size: 1rem;
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
   margin-bottom: 0.5rem;
 }
 
 .home-section .name {
-  color: #ccd6f6;
+  color: var(--secondary-color);
   font-size: 4rem;
   margin: 0;
 }
 
 .home-section .title {
-  color: #8892b0;
+  color: var(--text-color);
   font-size: 3rem;
   margin-top: 0;
 }
 
 .home-section .description {
-  color: #8892b0;
-  font-size: 1.1rem;
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
   line-height: 1.6;
   max-width: 540px;
+}
+
+/* Media Query per la responsività */
+@media (max-width: 768px) {
+  .home-section {
+    padding: var(--section-padding-mobile); /* Usa la variabile globale per il padding */
+  }
+
+  .home-section .name {
+    font-size: 2.5rem; /* Riduci la dimensione del nome su schermi piccoli */
+  }
+
+  .home-section .title {
+    font-size: 2rem; /* Riduci la dimensione del titolo su schermi piccoli */
+  }
 }

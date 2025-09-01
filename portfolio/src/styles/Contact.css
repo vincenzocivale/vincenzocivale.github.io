@@ -1,75 +1,58 @@
 .contact-section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 100px 0;
-  text-align: center; /* Centra anche il testo */
+  max-width: 540px;
+  text-align: center;
 }
 
 .contact-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  color: #ccd6f6;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-section-heading);
+  color: var(--secondary-color);
+  margin-bottom: 2.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
 }
 
 .contact-number {
-  color: #64ffda;
-  font-family: 'SF Mono', monospace;
-  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
   margin-right: 0.5rem;
 }
 
 .contact-text {
-  color: #8892b0;
+  color: var(--text-color);
   line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.contact-links {
-  /* Assicurati che questo container centri il suo unico elemento */
-  display: flex;
-  justify-content: center; /* Questo centra il pulsante orizzontalmente */
-  align-items: center;
-  /* Rimuoviamo il gap se non ci sono più elementi */
-  /* gap: 1.5rem; */ 
+  font-size: var(--font-size-sm);
+  margin-bottom: 3rem;
 }
 
 .contact-button {
-  border: 1px solid #64ffda;
-  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--primary-color);
+  padding: 1.25rem 1.75rem;
   border-radius: 4px;
-  color: #64ffda;
+  color: var(--primary-color);
   transition: all 0.3s ease-in-out;
+  font-family: var(--font-mono);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
 }
 
 .contact-button:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: var(--link-hover-color);
+  color: var(--primary-color);
 }
-
-/* Rimuovi completamente queste regole se non vuoi le icone */
-/*
-.contact-icon img {
-  width: 30px;
-  height: 30px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-in-out;
-}
-
-.contact-icon img:hover {
-  filter: none;
-}
-*/
 
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
   .contact-section {
-    padding: 50px 2rem;
+    padding: var(--section-padding-mobile); /* Usa la variabile globale */
   }
 
   .contact-heading {
     flex-direction: column;
     text-align: center;
+    font-size: var(--font-size-xl);
   }
 }

@@ -1,25 +1,22 @@
 .projects-section {
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 100px 0;
 }
 
 .projects-heading {
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  color: #ccd6f6;
+  font-size: var(--font-size-lg);
+  color: var(--secondary-color);
   margin-bottom: 3rem;
 }
 
 .projects-number {
-  color: #64ffda;
-  font-family: 'SF Mono', monospace;
-  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
   margin-right: 0.5rem;
 }
 
-/* Stile per le singole card di progetto */
 .project-card {
   display: flex;
   justify-content: space-between;
@@ -28,7 +25,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  background-color: #112240;
+  background-color: var(--card-background);
 }
 
 .project-card:nth-child(even) {
@@ -51,24 +48,24 @@
 }
 
 .project-label {
-  color: #64ffda;
-  font-family: 'SF Mono', monospace;
-  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xxs);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  color: #ccd6f6;
+  font-size: var(--font-size-md);
+  color: var(--secondary-color);
   margin: 0 0 1rem 0;
 }
 
 .project-description {
-  background-color: #0a192f;
+  background-color: var(--background-color);
   padding: 1.5rem;
   border-radius: 4px;
-  color: #a8b2d1;
+  color: var(--text-color);
 }
 
 .project-tech-list {
@@ -81,9 +78,9 @@
 }
 
 .project-tech-list li {
-  color: #8892b0;
-  font-family: 'SF Mono', monospace;
-  font-size: 0.8rem;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xxs);
 }
 
 .project-links {
@@ -106,7 +103,7 @@
 /* Media Query per schermi piccoli (es. tablet e smartphone) */
 @media (max-width: 768px) {
   .projects-section {
-    padding: 50px 2rem;
+    padding: var(--section-padding-mobile);
   }
   
   .project-card {
