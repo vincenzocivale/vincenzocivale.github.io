@@ -55,6 +55,7 @@
   left: 0;
   color: var(--primary-color);
 }
+/* About.css */
 
 .about-image-container {
   flex: 1;
@@ -63,52 +64,41 @@
   border-radius: 4px;
 }
 
+/* Stili per l'immagine */
 .profile-image {
   width: 100%;
   border-radius: 4px;
+  filter: contrast(1);
   transition: all 0.3s ease-in-out;
+  z-index: 1; /* Abbassato per far sì che l'SVG la sovrasti */
+  position: relative;
 }
 
-.about-image-container::after {
-  content: '';
+.profile-text-svg {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  top: 20px;
-  left: 20px;
-  z-index: -1;
-  transition: all 0.3s ease-in-out;
+   top: calc(100px + 250px); 
+  right: 0;
+  transform: translate(50%, -50%);
+  z-index: 3;
+  width: 50px; 
+  height: 300px;
 }
 
-/* Media Query per schermi piccoli (es. tablet e smartphone) */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Stile per il testo dentro l'SVG */
+.svg-text-outline {
+  font-family: var(--font-sans);
+  font-size: 50px;
+  fill: var(--secondary-color); /* Colore del riempimento */
 
+  stroke: var(--border-color); /* Colore del contorno (stesso del riempimento per spessore) */
+  stroke-width: 4px; /* Larghezza del contorno per renderlo più spesso */
+  
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+@media (max-width: 768px) {
   .about-image-container {
     display: none;
-  }
-
-  .about-section {
-    padding: var(--section-padding-mobile);
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .about-heading {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .skills-list {
-    grid-template-columns: 1fr;
-    text-align: left;
   }
 }

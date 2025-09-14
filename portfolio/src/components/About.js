@@ -28,8 +28,13 @@ const About = () => {
               <li>Database Management (SQL)</li>
             </ul>
           </div>
-          <div className="about-image-container">
+         <div className="about-image-container">
             <img src="/assets/images/cv_profile.jpg" alt="Profile Picture" className="profile-image" />
+            <svg className="profile-text-svg" viewBox="0 0 50 300"> {/* ViewBox adattato alle dimensioni CSS */}
+              <text x="50%" y="50%" text-anchor="middle" className="svg-text-outline">
+                プロフィール
+              </text>
+            </svg>
           </div>
         </div>
       </div>
