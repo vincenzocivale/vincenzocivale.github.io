@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Socials from './Socials';
 import './../styles/Navbar.css';
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -27,11 +23,11 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-logo">
-        <a href="#home"></a>
+        <a href="/"></a>
       </div>
       
       {/* Mobile menu toggle button */}
-      <button className="menu-toggle" onClick={handleMenuToggle} aria-label="Toggle menu">
+      <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
         <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
         <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
         <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
@@ -39,10 +35,10 @@ const Navbar = () => {
 
       {/* Desktop navigation links */}
       <ul className="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experiences">Experiences</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#experiences">Experiences</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#contact">Contact</a></li>
         <li className="nav-cv">
           <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf">Resume</a>
         </li>
@@ -50,12 +46,15 @@ const Navbar = () => {
 
       {/* Mobile navigation links */}
       <ul className={`nav-links-mobile ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="#about" onClick={handleMenuToggle}>About</a></li>
-        <li><a href="#experiences" onClick={handleMenuToggle}>Experiences</a></li>
-        <li><a href="#projects" onClick={handleMenuToggle}>Projects</a></li>
-        <li><a href="#contact" onClick={handleMenuToggle}>Contact</a></li>
+        <li><a href="/#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
+        <li><a href="/#experiences" onClick={() => setIsMenuOpen(false)}>Experiences</a></li>
+        <li><a href="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
+        <li><a href="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
         <li className="nav-cv-mobile">
-          <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf" onClick={handleMenuToggle}>Resume</a>
+          <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf" onClick={() => setIsMenuOpen(false)}>Resume</a>
+        </li>
+        <li className="nav-socials-mobile">
+          <Socials />
         </li>
       </ul>
     </nav>

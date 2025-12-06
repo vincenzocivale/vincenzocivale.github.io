@@ -5,8 +5,7 @@ import About from './components/About';
 import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Socials from './components/Socials';
-import Email from './components/Email';
+import SideElements from './components/SideElements';
 import './styles/main.css';
 
 const App = () => {
@@ -20,9 +19,8 @@ const App = () => {
       {/* Conditionally render the overlay */}
       <div className={`overlay ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
       
-      {/* Conditionally render the Socials and Email components */}
-      <Socials isMenuOpen={isMenuOpen} />
-      <Email isMenuOpen={isMenuOpen} />
+      {/* Render the left and right navigation elements */}
+      <SideElements />
       
       <main>
         <Home />
@@ -30,7 +28,6 @@ const App = () => {
         <Experiences />
         <Projects />
         <Contact />
-        {/* You only need one Socials component. The desktop and mobile versions are handled by CSS. */}
       </main>
     </div>
   );

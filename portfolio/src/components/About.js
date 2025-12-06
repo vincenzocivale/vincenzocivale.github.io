@@ -11,13 +11,13 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Hello! I'm an ambitious biomedical engineer with a strong focus on <strong>machine learning</strong> and <strong>bioinformatics</strong>. My journey started with a deep curiosity about how technology could revolutionize medicine, from understanding complex biological data to developing smarter diagnostic tools.
+              I develop multimodal machine learning frameworks that integrate bioimaging and omics data for personalized medicine. As a PhD candidate  under Prof. Magi, I'm building models that are both high-performing and practical, focusing on scalability, efficient training on large datasets, and deployment systems that clinicians can use without deep ML expertise.
             </p>
             <p>
-              I'm passionate about building data-driven solutions that bridge the gap between engineering and clinical research. My experience spans from developing predictive models for disease prognosis to analyzing genomic data to uncover new biological insights.
+              Before my PhD, I spent two years as a research fellow at the University of Florence's bioimaging lab, where I built mixed reality applications using Unity and HoloLens for surgical planning. I worked directly with surgical teams to develop prototypes that are now in clinical testing workflows.
             </p>
             <p>
-              I am excited to start my Ph.D. to continue exploring these fields and contribute to innovative research. Here are a few technologies I've been working with recently:
+              I taught myself programming from scratch starting in February 2020. Within four years, I went from writing my first line of code to building ML systems and earning a research fellowship.
             </p>
             <ul className="skills-list">
               <li>Python (Pandas, NumPy, Scikit-learn)</li>

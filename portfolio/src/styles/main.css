@@ -8,7 +8,7 @@
   --background-color: #2B2B2B; /* Background color */
   --card-background: #3C3F41; /* Card background */
   --border-color: #555555; /* A darker gray for borders */
-  --link-hover-color: rgba(255, 198, 109, 0.2);
+  --link-hover-color: rgba(89, 162, 222, 0.1);
 
   /* Tipografia - Font Family */
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;

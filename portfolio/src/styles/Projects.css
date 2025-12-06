@@ -55,6 +55,11 @@
   margin-bottom: 0.5rem;
 }
 
+.project-title a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
 .project-title {
   font-size: var(--font-size-md);
   color: var(--secondary-color);
@@ -98,6 +103,24 @@
 
 .project-links img:hover {
   filter: none;
+}
+
+.case-study-link {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--primary-color);
+  margin-top: 1rem;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.case-study-link:hover {
+  transform: translateX(5px);
+}
+
+.case-study-link span {
+  margin-left: 0.5rem;
 }
 
 /* Media Query per schermi piccoli (es. tablet e smartphone) */

@@ -152,6 +152,25 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* Styles for Socials in Mobile Nav */
+.nav-socials-mobile {
+  margin-top: 2rem;
+}
+
+.nav-socials-mobile .socials-list {
+  flex-direction: row; /* Display icons horizontally */
+  gap: 1.5rem;
+}
+
+.nav-socials-mobile .socials-list::after {
+  display: none; /* Remove the vertical line */
+}
+
+.nav-socials-mobile .socials-list li {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* Hide desktop links */
