@@ -6,7 +6,7 @@ const experiencesData = [
   {
     company: 'University of Siena',
     title: 'PhD Student',
-    duration: '09 2025 - Present',
+    duration: '09/2025 - Present',
     details: [
       'Detail about your role and responsibilities. What did you do here?',
       'Highlight a key achievement or project you worked on.',
@@ -16,7 +16,7 @@ const experiencesData = [
   {
     company: 'BioImaging Lab',
     title: 'Research Fellow',
-    duration: '09 2023 - 06 2025',
+    duration: '09/2023 - 06/2025',
     details: [
       'Detail about your role and responsibilities for this second job.',
       'A different key achievement or project you worked on.',
