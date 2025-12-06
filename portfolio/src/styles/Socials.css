@@ -23,10 +23,21 @@
 .socials-list li a svg {
   width: 1.75rem;
   height: 1.75rem;
-  stroke: var(--text-color);
+  stroke: var(--text-color); /* Default stroke color for stroke-based icons */
+  fill: none; /* Ensure no default fill for stroke-based icons */
   transition: all 0.2s ease-in-out;
 }
 
 .socials-list li a:hover svg {
-  stroke: var(--primary-color);
+  stroke: var(--primary-color); /* Hover stroke color for stroke-based icons */
+}
+
+/* Specific styling for the Google Scholar icon (fill-based) */
+.socials-list li a .feather-scholar {
+  fill: var(--text-color); /* Default fill color for Google Scholar */
+  stroke: none; /* Ensure no stroke is applied as it's a filled icon */
+}
+
+.socials-list li a:hover .feather-scholar {
+  fill: var(--primary-color); /* Hover fill color for Google Scholar */
 }

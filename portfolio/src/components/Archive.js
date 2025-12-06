@@ -43,7 +43,9 @@ const Archive = () => {
     }
   };
 
-  const filteredProjects = projectsData.filter(project => {
+  const sortedProjects = [...projectsData].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const filteredProjects = sortedProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));

@@ -9,6 +9,7 @@ const projectsData = [
     detailLink: 'https://example.com/project/ecommerce-platform-details', // Example detail link
     image: '/assets/images/project-1.jpg',
     featured: true,
+    date: '2024-10-15',
   },
   {
     id: 'p2',
@@ -20,6 +21,7 @@ const projectsData = [
     detailLink: 'https://example.com/project/image-classification-ml-details', // Example detail link
     image: '/assets/images/project-2.jpg',
     featured: true,
+    date: '2025-01-20',
   },
   {
     id: 'p3',
@@ -31,6 +33,7 @@ const projectsData = [
     detailLink: 'https://example.com/project/sentiment-analyzer-details', // Example detail link
     image: '/assets/images/project-3.jpg',
     featured: true,
+    date: '2024-12-01',
   },
   {
     id: 'p4',
@@ -40,6 +43,7 @@ const projectsData = [
     repoLink: 'https://github.com/yourusername/simple-blog',
     paperLink: '',
     detailLink: '', // No specific detail page
+    date: '2024-05-10',
   },
   {
     id: 'p5',
@@ -49,6 +53,7 @@ const projectsData = [
     repoLink: 'https://github.com/yourusername/portfolio-v1',
     paperLink: '',
     detailLink: '', // No specific detail page
+    date: '2023-11-25',
   },
   {
     id: 'p6',
@@ -58,6 +63,7 @@ const projectsData = [
     repoLink: 'https://github.com/yourusername/recommendation-system',
     paperLink: 'https://example.com/paper/recommendation-system', // Example paper link
     detailLink: '', // No specific detail page
+    date: '2024-08-01',
   },
 ];
 

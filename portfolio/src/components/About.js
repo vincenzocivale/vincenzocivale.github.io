@@ -11,7 +11,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I develop multimodal machine learning frameworks that integrate bioimaging and omics data for personalized medicine. As a PhD candidate  under Prof. Magi, I'm building models that are both high-performing and practical, focusing on scalability, efficient training on large datasets, and deployment systems that clinicians can use without deep ML expertise.
+              I develop multimodal machine learning frameworks that integrate bioimaging and omics data for personalized medicine. As a PhD student  under Prof. Magi, I'm building models that are both high-performing and practical, focusing on scalability, efficient training on large datasets, and deployment systems that clinicians can use without deep ML expertise.
             </p>
             <p>
               Before my PhD, I spent two years as a research fellow at the University of Florence's bioimaging lab, where I built mixed reality applications using Unity and HoloLens for surgical planning. I worked directly with surgical teams to develop prototypes that are now in clinical testing workflows.
