@@ -4,9 +4,9 @@ import './../styles/Experiences.css';
 // Dati fittizi delle esperienze
 const experiencesData = [
   {
-    company: 'Your Company A',
-    title: 'Job Title A',
-    duration: 'Month Year - Month Year',
+    company: 'University of Siena',
+    title: 'PhD Student',
+    duration: '09 2025 - Present',
     details: [
       'Detail about your role and responsibilities. What did you do here?',
       'Highlight a key achievement or project you worked on.',
@@ -14,9 +14,9 @@ const experiencesData = [
     ],
   },
   {
-    company: 'Your Company B',
-    title: 'Job Title B',
-    duration: 'Month Year - Month Year',
+    company: 'BioImaging Lab',
+    title: 'Research Fellow',
+    duration: '09 2023 - 06 2025',
     details: [
       'Detail about your role and responsibilities for this second job.',
       'A different key achievement or project you worked on.',

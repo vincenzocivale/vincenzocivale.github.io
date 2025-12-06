@@ -24,9 +24,13 @@ const App = () => {
       
       <main>
         <Home />
+        <div className="section-separator"></div>
         <About />
+        <div className="section-separator"></div>
         <Experiences />
+        <div className="section-separator"></div>
         <Projects />
+        <div className="section-separator"></div>
         <Contact />
       </main>
     </div>

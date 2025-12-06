@@ -3,12 +3,15 @@
 /* Dark Theme (PyCharm-inspired) - Default */
 :root {
   --primary-color: #59A2DE; /* Accent color from PyCharm */
-  --secondary-color: #A9B7C6; /* Main text color */
-  --text-color: #808080; /* Secondary text color */
-  --background-color: #2B2B2B; /* Background color */
-  --card-background: #3C3F41; /* Card background */
-  --border-color: #555555; /* A darker gray for borders */
+  --secondary-color: #E0E0E0; /* Lighter secondary text color for better contrast */
+  --text-color: #A9B7C6; /* Standard text color, improved contrast */
+  --background-color: #202124; /* Darker background, similar to Google's dark modes */
+  --card-background: #303134; /* Slightly lighter card background */
+  --border-color: #444444; /* Darker gray for borders */
   --link-hover-color: rgba(89, 162, 222, 0.1);
+  --background-scrolled: rgba(32, 33, 36, 0.9); /* Slightly transparent dark background */
+  --shadow-color: rgba(0, 0, 0, 0.6); /* Darker shadow for scrolled navbar */
+  --job-duration-color: #B0BEC5;
 
   /* Tipografia - Font Family */
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;
@@ -38,6 +41,9 @@
   --card-background: #EEEEEE;
   --border-color: #CCCCCC;
   --link-hover-color: rgba(0, 122, 204, 0.1);
+  --background-scrolled: rgba(245, 245, 245, 0.9); /* Slightly transparent light background */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for scrolled navbar */
+  --job-duration-color: #5e6b91; /* A suitable dark grey for light theme */
 }
 
 /* Regole globali */
@@ -56,6 +62,14 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.5;
+}
+
+.section-separator {
+  width: 70%; /* Adjust width as needed */
+  max-width: 900px;
+  margin: 20px auto; /* Vertical margin for spacing, auto for centering */
+  border-bottom: 1px dashed var(--border-color); /* Subtle dashed line */
+  opacity: 0.5; /* Make it less prominent */
 }
 
 section {
