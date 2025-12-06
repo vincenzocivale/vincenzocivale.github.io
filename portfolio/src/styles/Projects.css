@@ -26,6 +26,12 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--card-background);
+  transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
 }
 
 .project-card:nth-child(even) {
@@ -67,9 +73,6 @@
 }
 
 .project-description {
-  background-color: var(--background-color);
-  padding: 1.5rem;
-  border-radius: 4px;
   color: var(--text-color);
 }
 
@@ -94,15 +97,27 @@
   gap: 1rem;
 }
 
+.project-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Larger clickable area */
+  height: 40px;
+  border-radius: 50%; /* Make it circular */
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.project-links a:hover {
+  background-color: rgba(89, 162, 222, 0.1); /* Use primary color with transparency on hover */
+  transform: translateY(-3px); /* Subtle lift */
+}
+
 .project-links img {
   width: 20px;
   height: 20px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-in-out;
-}
-
-.project-links img:hover {
-  filter: none;
+  filter: none; /* Icons are colored by default */
+  transition: transform 0.3s ease-in-out;
 }
 
 .case-study-link {
