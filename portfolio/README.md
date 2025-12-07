@@ -96,3 +96,7 @@ Il tuo sito sarà visibile su http://localhost:3000.
 La repo riguarda un blog personale da utilizzare come mio portfolio in cui pubblicare i miei lavori come ricercatore in ingegneria biomedica, ed aumentare le possiiblità di  essere assunto da una FAANG. Non mi interessano effetti particolari ma che sia veloce, minimal e bello. Al momento non mi ricordo a che punto ero con lo sviluppo in quanto è un paio di mesi che non lo prendo in mano. Potresti analizzare le componenti principali dello stato attuale, identificando cosa manca da implementare per avere una prima  versione funzionante, da rifinire in seguito. Se mi ricordassi anche come visualizzare il sito su VSCode o sul browser mi faresti una mano 
 
 
+
+
+
+

@@ -11,18 +11,18 @@
   content: '';
   display: block;
   width: 1px;
-  height: 5.625rem;
+  height: 4rem; /* Reduced height */
   margin: 0 auto;
   background-color: var(--text-color);
 }
 
 .socials-list li {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem; /* Reduced margin */
 }
 
 .socials-list li a svg {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem; /* Reduced size */
+  height: 1.5rem; /* Reduced size */
   stroke: var(--text-color); /* Default stroke color for stroke-based icons */
   fill: none; /* Ensure no default fill for stroke-based icons */
   transition: all 0.2s ease-in-out;

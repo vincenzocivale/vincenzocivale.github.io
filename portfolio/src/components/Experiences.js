@@ -32,7 +32,7 @@ const Experiences = () => {
   return (
     <section id="experiences" className="experiences-section">
       <h2 className="experiences-heading">
-        <span className="experiences-number">03.</span> Where I've Worked
+        <span className="experiences-number">03.</span> Experience
       </h2>
 
       <div className="experiences-tab">

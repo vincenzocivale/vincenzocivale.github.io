@@ -8,7 +8,7 @@ const Home = () => {
       <h1 className="name">Vincenzo Yuto Civale</h1>
       <h2 className="title">Biomedical Engineer</h2>
       <p className="description">
-        PhD student developing multimodal ML frameworks for personalized medicine. 
+        PhD student developing multimodal ML frameworks for personalized medicine.
         Combining bioimaging and omics data for scalable clinical applications.
       </p>
     </section>
