@@ -36,6 +36,28 @@
   max-width: 540px;
 }
 
+.dna-background-svg {
+  position: absolute;
+  top: 4rem; /* Aligned with the bottom of the Navbar (approx. 64px) */
+  right: 0;
+  width: 40%; /* Reduced to 80% of previous 50% */
+  height: auto;
+  z-index: 0; /* Place behind text content */
+  opacity: 0.4; /* Increased opacity for better contrast */
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+  transform: scaleX(-1); /* Flip horizontally */
+  transform: scaleX(-1) scale(1.1);
+}
+
+.dna-background-svg img {
+  width: 100%;
+  height: auto;
+}
+
+.dna-background-svg svg path {
+  fill: var(--primary-color) !important; /* Override inline styles with primary color */
+}
+
 /* Media Query per la responsività */
 @media (max-width: 768px) {
   .home-section {

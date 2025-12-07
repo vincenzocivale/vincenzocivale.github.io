@@ -11,6 +11,9 @@ const Home = () => {
         PhD student developing multimodal ML frameworks for personalized medicine.
         Combining bioimaging and omics data for scalable clinical applications.
       </p>
+      <div className="dna-background-svg">
+        <img src="/assets/images/dna.svg" alt="DNA Structure" />
+      </div>
     </section>
   );
 };

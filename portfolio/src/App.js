@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Archive from './components/Archive'; // Import the new Archive component
 import SideElements from './components/SideElements';
+import Footer from './components/Footer'; // Import Footer component
 import './styles/main.css';
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
           } />
           <Route path="/archive" element={<Archive />} />
         </Routes>
+        <Footer /> {/* Add Footer component here */}
       </div>
     </BrowserRouter>
   );
