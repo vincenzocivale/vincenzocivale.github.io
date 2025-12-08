@@ -8,8 +8,7 @@ const Home = () => {
       <h1 className="name">Vincenzo Yuto Civale</h1>
       <h2 className="title">Biomedical Engineer</h2>
       <p className="description">
-        PhD student developing multimodal ML frameworks for personalized medicine.
-        Combining bioimaging and omics data for scalable clinical applications.
+        PhD researcher developing multimodal machine learning methods for healthcare applications, combining bio-imaging and omics data to build interpretable, adoption-ready clinical tools.
       </p>
       <div className="dna-background-svg">
         <img src="/assets/images/dna.svg" alt="DNA Structure" />

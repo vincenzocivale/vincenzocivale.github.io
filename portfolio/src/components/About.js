@@ -11,21 +11,21 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I develop multimodal machine learning frameworks that integrate bioimaging and omics data for personalized medicine. As a PhD student  under Prof. Magi, I'm building models that are both high-performing and practical, focusing on scalability, efficient training on large datasets, and deployment systems that clinicians can use without deep ML expertise.
+              I am a PhD student specialising in multimodal machine learning, focusing on integrating bioimaging and omics data for personalized medicine applications. My focus is on building high-performing, scalable models and deployable systems designed for clinicians, prioritizing interpretability and reliability.
             </p>
             <p>
-              Before my PhD, I spent two years as a research fellow at the University of Florence's bioimaging lab, where I built mixed reality applications using Unity and HoloLens for surgical planning. I worked directly with surgical teams to develop prototypes that are now in clinical testing workflows.
+              I started learning to code at the beginning of the pandemic, which led to a two-year research fellowship at the Bioimaging Laboratory. During this time, I developed mixed reality applications for surgical planning and training and supervised several thesis students.
             </p>
             <p>
-              I taught myself programming from scratch starting in February 2020. Within four years, I went from writing my first line of code to building ML systems and earning a research fellowship.
+               I have started writing a blog that explains healthcare ML research papers in an accessible way. The aim is to bridge the gap between general introductions and technical publications for those new to the field.
             </p>
             <ul className="skills-list">
-              <li>Python (Pandas, NumPy, Scikit-learn)</li>
-              <li>TensorFlow & PyTorch</li>
-              <li>R</li>
-              <li>Data Analysis & Visualization</li>
-              <li>Genomic Data Analysis</li>
-              <li>Database Management (SQL)</li>
+              <li>Bio-imaging</li>
+              <li>Single cell</li>
+              <li>Multi-modal ML</li>
+              <li>Computer vision</li>
+              <li>Genomics</li>
+              <li>Explainable AI</li>
             </ul>
           </div>
          <div className="about-image-container">

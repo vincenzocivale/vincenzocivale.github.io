@@ -3,7 +3,7 @@ import './../styles/Email.css';
 
 const Email = () => {
   return (
-    <a href="mailto:tua.email@esempio.com">tua.email@esempio.com</a>
+    <a href="mailto:civalevincenzoyuto@gmail.com">civalevincenzoyuto@gmail.com</a>
   );
 };
 
