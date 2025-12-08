@@ -5,7 +5,7 @@
   --primary-color: #59A2DE; /* Accent color from PyCharm */
   --secondary-color: #E0E0E0; /* Lighter secondary text color for better contrast */
   --text-color: #A9B7C6; /* Standard text color, improved contrast */
-  --background-color: #202124; /* Darker background, similar to Google's dark modes */
+  --background-color: #20232A; /* Darker background, similar to Google's dark modes */
   --card-background: #303134; /* Slightly lighter card background */
   --border-color: #444444; /* Darker gray for borders */
   --link-hover-color: rgba(89, 162, 222, 0.1);
@@ -114,4 +114,10 @@ a {
   section {
     padding: var(--section-padding-mobile);
   }
+}.gradient-text {
+  background: var(--gradient-border);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

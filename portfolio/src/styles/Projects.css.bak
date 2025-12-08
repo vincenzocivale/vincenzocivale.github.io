@@ -18,11 +18,15 @@
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
   margin-bottom: 5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--card-background); /* Solid background for the inner content */
+  transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
 }
 
 .project-card:hover {
@@ -31,44 +35,22 @@
 }
 
 .project-card:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .project-image-container {
-  grid-column: 1 / 7;
-  grid-row: 1 / -1;
-  position: relative;
-  z-index: 1;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 50%;
 }
 
 .project-image {
   width: 100%;
   display: block;
-  transition: filter 0.3s ease-in-out;
-}
-
-.project-image-container:hover .project-image{
-  filter: grayscale(0%) contrast(1) brightness(100%);
 }
 
 .project-content {
-  grid-column: 6 / -1;
-  grid-row: 1 / -1;
-  position: relative;
-  z-index: 2;
+  flex: 1;
   padding: 2rem;
-  text-align: right;
-}
-
-.project-card:nth-child(even) .project-image-container {
-  grid-column: 7 / -1;
-}
-
-.project-card:nth-child(even) .project-content {
-  grid-column: 1 / 8;
-  text-align: left;
 }
 
 .project-label {
@@ -91,10 +73,6 @@
 }
 
 .project-description {
-  background-color: var(--card-background);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: var(--text-color);
 }
 
@@ -105,11 +83,6 @@
   gap: 1.5rem;
   padding: 0;
   margin-top: 1rem;
-  justify-content: flex-end;
-}
-
-.project-card:nth-child(even) .project-tech-list {
-  justify-content: flex-start;
 }
 
 .project-tech-list li {
