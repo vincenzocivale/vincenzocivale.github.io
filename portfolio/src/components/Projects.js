@@ -11,11 +11,11 @@ const Projects = () => {
 
       <div className="project-card">
         <div className="project-image-container">
-          <img src="/assets/images/single-cell-annotation_cover.png" alt="A screenshot of Single Cell Classification Tool" className="project-image" />
+          <img src="/assets/images/cell_classification_cover.png" alt="A screenshot of Single Cell Classification Tool" className="project-image" />
         </div>
         <div className="project-content">
           <p className="project-label">Featured Project</p>
-          <h3 className="project-title">Single Cell Classification Tool</h3>
+          <h3 className="project-title">Single Cell Annotation Tool</h3>
           <p className="project-description">
             A tool that automatically identifies and classifies different types of cells from single-cell data. The aim is to make heterogeneous biological data easier to interpret, helping researchers to quickly discover patterns and differences between cell types.
           </p>
@@ -37,7 +37,7 @@ const Projects = () => {
 
       <div className="project-card">
         <div className="project-image-container">
-          <img src="/assets/images/IGTLInk Plugin_cover.png" alt="Cover image Plugin" className="project-image" />
+          <img src="/assets/images/igtlink_cover.png" alt="Cover image Plugin" className="project-image" />
         </div>
         <div className="project-content">
           <p className="project-label">Featured Project</p>

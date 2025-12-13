@@ -18,15 +18,15 @@
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   
-  /* Tipografia - Dimensioni Font */
-  --font-size-xxs: 0.8rem;
-  --font-size-xs: 1rem;
-  --font-size-sm: 1.125rem;
-  --font-size-md: 1.5rem;
-  --font-size-lg: 2rem;
-  --font-size-xl: 2.5rem;
-  --font-size-xxl: 3rem;
-  --font-size-section-heading: 3.5rem;
+  /* Tipografia - Dimensioni Font Fluid-Responsive */
+  --font-size-xxs: 0.8rem; /* Rimane fisso per leggibilità minima */
+  --font-size-xs: clamp(0.9rem, 1.5vw, 1rem);
+  --font-size-sm: clamp(1rem, 2vw, 1.125rem);
+  --font-size-md: clamp(1.25rem, 3vw, 1.5rem);
+  --font-size-lg: clamp(1.5rem, 4vw, 2rem);
+  --font-size-xl: clamp(1.8rem, 5vw, 2.5rem);
+  --font-size-xxl: clamp(2.2rem, 6vw, 3rem);
+  --font-size-section-heading: clamp(2.5rem, 7vw, 3.5rem);
 
   /* Spaziatura */
   --section-padding-desktop: 100px 0;
@@ -68,7 +68,7 @@ body {
 }
 
 .content-wrapper {
-  max-width: 1000px; /* Max width for content */
+  max-width: 1200px; /* Max width for content, adjusted for more space */
   margin: 0 auto; /* Center the content */
   padding: 0 2rem; /* Add some horizontal padding for smaller screens */
 }

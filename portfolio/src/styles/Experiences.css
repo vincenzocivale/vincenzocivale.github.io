@@ -1,5 +1,5 @@
 .experiences-section {
-  max-width: 900px;
+  /* max-width: 900px; - Removed to inherit global content width */
 }
 
 .experiences-heading {
@@ -39,6 +39,7 @@
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-size: var(--font-size-xs);
 }
 
 .tab-button.active {
@@ -83,6 +84,7 @@
   position: relative;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
+  font-size: var(--font-size-sm);
 }
 
 .job-details li::before {

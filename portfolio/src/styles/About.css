@@ -1,5 +1,5 @@
 .about-section {
-  max-width: 900px;
+  /* max-width: 900px; - Removed to inherit global content width */
 }
 
 .about-heading {
@@ -31,6 +31,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   color: var(--text-color);
+  font-size: var(--font-size-sm);
 }
 
 .skills-list {
@@ -47,6 +48,7 @@
   margin-bottom: 10px;
   padding-left: 20px;
   color: var(--text-color);
+  font-size: var(--font-size-xs);
 }
 
 .skills-list li::before {
