@@ -8,6 +8,7 @@
     margin-bottom: 40px;
     font-size: clamp(26px, 5vw, 32px);
     white-space: nowrap;
+    color: var(--secondary-color);
   }
   
   .projects-heading .projects-number {

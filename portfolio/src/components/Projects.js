@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <h2 className="projects-heading">
-        <span className="projects-number">02.</span> <span className="gradient-text">My Projects</span>
+        <span className="projects-number">02.</span> My Projects
       </h2>
 
 
