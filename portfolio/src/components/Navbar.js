@@ -51,7 +51,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
         <li><a href="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
         <li><a href="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
         <li className="nav-cv-mobile">
-          <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf" onClick={() => setIsMenuOpen(false)}>Resume</a>
+          <a href="/assets/vincenzo_civale_resume.pdf" download="vincenzo_civale_resume.pdf" onClick={() => setIsMenuOpen(false)}>Resume</a>
         </li>
         <li className="nav-socials-mobile">
           <Socials />
