@@ -40,7 +40,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li className="nav-cv">
-          <a href="/assets/cv/your-cv.pdf" download="Your-Name-CV.pdf">Resume</a>
+          <a href="/assets/vincenzo_civale_resume.pdf" download="vincenzo_civale_resume.pdf">Resume</a>
         </li>
       </ul>
 
