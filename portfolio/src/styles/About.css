@@ -100,7 +100,23 @@
 }
 
 @media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr; /* Single column for skills on mobile */
+  }
+
   .about-image-container {
-    display: none;
+    max-width: 200px; /* Adjust size for mobile */
+    margin-bottom: 2rem; /* Space between image and text */
+    display: block; /* Ensure it's not hidden */
+  }
+
+  .profile-text-svg {
+    display: none; /* Hide the SVG text on mobile */
   }
 }

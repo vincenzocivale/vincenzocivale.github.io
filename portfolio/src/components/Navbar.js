@@ -5,6 +5,18 @@ import './../styles/Navbar.css';
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
+
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setIsScrolled(true);
@@ -35,10 +47,10 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
 
       {/* Desktop navigation links */}
       <ul className="nav-links">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#experiences">Experiences</a></li>
-        <li><a href="/#projects">Projects</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
+        <li><a href="#experiences" onClick={(e) => handleNavClick(e, 'experiences')}>Experiences</a></li>
+        <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
+        <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
         <li className="nav-cv">
           <a href="/assets/vincenzo_civale_resume.pdf" download="vincenzo_civale_resume.pdf">Resume</a>
         </li>
@@ -46,10 +58,10 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
 
       {/* Mobile navigation links */}
       <ul className={`nav-links-mobile ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="/#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-        <li><a href="/#experiences" onClick={() => setIsMenuOpen(false)}>Experiences</a></li>
-        <li><a href="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
-        <li><a href="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+        <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
+        <li><a href="#experiences" onClick={(e) => handleNavClick(e, 'experiences')}>Experiences</a></li>
+        <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
+        <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
         <li className="nav-cv-mobile">
           <a href="/assets/vincenzo_civale_resume.pdf" download="vincenzo_civale_resume.pdf" onClick={() => setIsMenuOpen(false)}>Resume</a>
         </li>

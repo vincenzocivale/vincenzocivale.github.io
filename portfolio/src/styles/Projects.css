@@ -123,7 +123,8 @@
   /* Responsive */
   @media (max-width: 768px) {
     .project-card {
-      display: block;
+      display: flex; /* Change to flex for ordering */
+      flex-direction: column; /* Stack content vertically */
       margin-bottom: 70px;
     }
   
@@ -136,13 +137,15 @@
     .project-image-container {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.25;
+      opacity: 1; /* Make image fully visible */
+      order: -1; /* Place image above content */
     }
   
     .project-description {
-      padding: 20px 0;
-      background-color: transparent;
-      box-shadow: none;
+      position: static; /* Remove absolute positioning */
+      padding: 25px; /* Revert to desktop padding */
+      background-color: var(--card-background); /* Reintroduce background */
+      box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7); /* Reintroduce shadow */
     }
   
     .project-card:nth-of-type(even) .project-content {

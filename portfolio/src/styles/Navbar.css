@@ -121,21 +121,21 @@
   display: flex; /* Keep this to ensure flexbox works on mobile */
   flex-direction: column;
   position: fixed; /* Position it relative to the viewport */
-  top: 0;
-  right: -100vw; /* Initially off-screen */
-  width: min(75vw, 400px);
+  top: -100vh; /* Initially off-screen above the viewport */
+  left: 0; /* Align to the left edge */
+  width: 100vw; /* Full-width */
   height: 100vh;
   background-color: var(--background-scrolled);
   padding: 5rem 2rem;
-  box-shadow: -10px 0 30px -10px var(--shadow-color);
-  transition: right 0.3s ease-in-out;
+  box-shadow: 0 10px 30px -10px var(--shadow-color); /* Shadow at the bottom */
+  transition: top 0.3s ease-in-out; /* Animate the top property */
   z-index: 999;
   font-family: var(--font-mono);
   justify-content: center;
   align-items: center;
 }
 .nav-links-mobile.open {
-  right: 0;
+  top: 0; /* Slide in from the top */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,9 +178,6 @@
 
   .menu-toggle {
     display: block; /* Show hamburger menu */
-  }
-  .nav-logo {
-    display: none;
   }
 }
 
