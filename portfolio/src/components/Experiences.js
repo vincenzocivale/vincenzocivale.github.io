@@ -14,13 +14,13 @@ const experiencesData = [
     ],
   },
   {
-    company: 'BioImaging Lab',
+    company: 'Univerisity of Florence',
     title: 'Research Fellow',
     duration: '09/2023 - 06/2025',
     details: [
-      'Detail about your role and responsibilities for this second job.',
-      'A different key achievement or project you worked on.',
-      'Mention technologies or skills used in this new role.',
+      'Developed deep learning pipeline for medical image segmentation, with performance validated by radiologists.',
+      'Conducted research on neurological behavioral differences between digital natives and immigrants as part of a PRIN (Project of National Interest) project.',
+      'Collaborated on the development of a medical image volume visualization system for Hololens2',
     ],
   },
   // Duplica questo blocco per ogni tua esperienza

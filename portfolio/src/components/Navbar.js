@@ -35,8 +35,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-logo">
-        <a href="/"></a>
-      </div>
+        </div>
       
       {/* Mobile menu toggle button */}
       <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
