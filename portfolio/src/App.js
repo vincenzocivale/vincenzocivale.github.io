@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -15,7 +15,7 @@ const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         {/* Pass the state and a function to update it to the Navbar */}
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
@@ -57,7 +57,7 @@ const App = () => {
         </Routes>
         <Footer /> {/* Add Footer component here */}
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
