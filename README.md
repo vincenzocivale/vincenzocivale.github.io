@@ -20,9 +20,11 @@ experience tabs.
 - Node.js 24 recommended
 - npm
 
-The expected Node version is also declared in `.nvmrc`.
+The expected Node version is declared in `.nvmrc`.
 
 ## Local development
+
+From the repository root:
 
 ```bash
 npm install
@@ -36,9 +38,9 @@ Astro serves the site at `http://localhost:4321` by default.
 Run the complete local validation before committing:
 
 ```bash
+npm run format:check
 npm run check
 npm run build
-npm run format:check
 ```
 
 The production build is generated in `dist/` and is not committed.
@@ -48,19 +50,21 @@ The production build is generated in `dist/` and is not committed.
 GitHub Actions builds and deploys the site to GitHub Pages from
 `refactored_main`.
 
-In the repository settings, GitHub Pages must use:
+GitHub Pages must use:
 
 ```text
 Settings → Pages → Build and deployment → Source → GitHub Actions
 ```
 
-No generated website bundle is intended to be committed once the migration to
-Actions-based deployment is complete.
+Generated website bundles are not committed to the repository.
 
 ## Structure
 
 ```text
-portfolio/
+.
+├── .github/
+│   ├── workflows/
+│   └── dependabot.yml
 ├── public/              # static files and media
 ├── src/
 │   ├── components/      # Astro components
@@ -70,5 +74,6 @@ portfolio/
 │   └── styles/          # vanilla CSS
 ├── astro.config.mjs
 ├── package.json
+├── package-lock.json
 └── tsconfig.json
 ```

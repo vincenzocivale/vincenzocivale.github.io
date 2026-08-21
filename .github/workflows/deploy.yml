@@ -25,7 +25,6 @@ jobs:
       - name: Build and upload Astro site
         uses: withastro/action@v6
         with:
-          path: ./portfolio
           node-version: 24
 
   deploy:
