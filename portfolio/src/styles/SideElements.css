@@ -44,8 +44,12 @@
   background-color: var(--text-color);
 }
 
-/* Hide on mobile */
-@media (max-width: 768px) {
+/*
+ * Side rails only work when the viewport has enough horizontal space.
+ * On mobile and portrait / near-portrait screens they are replaced by
+ * centered social links in the footer.
+ */
+@media (max-width: 768px), (max-aspect-ratio: 4 / 3) {
   .side-elements-container {
     display: none;
   }

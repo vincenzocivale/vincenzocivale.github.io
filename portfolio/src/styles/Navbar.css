@@ -10,14 +10,23 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:
+    background-color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    border-color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-bottom: 1px solid transparent;
   font-family: var(--font-mono); /* Use a mono font for the nav links */
 }
 
 .navbar.scrolled {
-  background-color: var(--background-scrolled); /* A slightly darker, opaque color */
-  box-shadow: 0 10px 30px -10px var(--shadow-color);
-  backdrop-filter: blur(10px);
+  /*
+   * Keep the fixed navigation visually uniform. The previous combination of
+   * a translucent background, backdrop blur, and a large shadow produced a
+   * dark band inside the navbar on some viewports.
+   */
+  background-color: var(--background-color);
+  border-bottom-color: rgba(169, 183, 198, 0.10);
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .nav-logo a {
@@ -121,21 +130,31 @@
   display: flex; /* Keep this to ensure flexbox works on mobile */
   flex-direction: column;
   position: fixed; /* Position it relative to the viewport */
-  top: -100vh; /* Initially off-screen above the viewport */
+  top: 0;
   left: 0; /* Align to the left edge */
   width: 100vw; /* Full-width */
   height: 100vh;
   background-color: var(--background-scrolled);
+  margin: 0;
   padding: 5rem 2rem;
-  box-shadow: 0 10px 30px -10px var(--shadow-color); /* Shadow at the bottom */
-  transition: top 0.3s ease-in-out; /* Animate the top property */
+  box-shadow: none;
+  transform: translateY(-100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform 0.3s ease-in-out,
+    visibility 0s linear 0.3s;
   z-index: 999;
   font-family: var(--font-mono);
   justify-content: center;
   align-items: center;
 }
 .nav-links-mobile.open {
-  top: 0; /* Slide in from the top */
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 30px -10px var(--shadow-color);
   display: flex;
   align-items: center;
   justify-content: center;

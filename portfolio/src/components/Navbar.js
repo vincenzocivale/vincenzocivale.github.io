@@ -1,68 +1,74 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Socials from './Socials';
 import './../styles/Navbar.css';
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleNavClick = (e, sectionId) => {
-    e.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-  };
-
-
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+  const handleNavClick = (event, sectionId) => {
+    event.preventDefault();
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navItems = [
+    { label: 'Work', target: 'projects' },
+    { label: 'Publications', target: 'publications' },
+    { label: 'About', target: 'about' },
+    { label: 'Experience', target: 'experiences' },
+    { label: 'Contact', target: 'contact' },
+  ];
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="nav-logo">
-        </div>
-      
-      {/* Mobile menu toggle button */}
-      <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-        <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
-        <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
-        <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+      <div className="nav-logo" />
+
+      <button
+        className="menu-toggle"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+      >
+        <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+        <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+        <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
       </button>
 
-      {/* Desktop navigation links */}
       <ul className="nav-links">
-        <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
-        <li><a href="#experiences" onClick={(e) => handleNavClick(e, 'experiences')}>Experiences</a></li>
-        <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
-        <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
+        {navItems.map(({ label, target }) => (
+          <li key={target}>
+            <a href={`#${target}`} onClick={(event) => handleNavClick(event, target)}>
+              {label}
+            </a>
+          </li>
+        ))}
         <li className="nav-cv">
           <a href="/assets/vincenzo_civale_resume.pdf" download="vincenzo_civale_resume.pdf">Resume</a>
         </li>
       </ul>
 
-      {/* Mobile navigation links */}
       <ul className={`nav-links-mobile ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
-        <li><a href="#experiences" onClick={(e) => handleNavClick(e, 'experiences')}>Experiences</a></li>
-        <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
-        <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
+        {navItems.map(({ label, target }) => (
+          <li key={target}>
+            <a href={`#${target}`} onClick={(event) => handleNavClick(event, target)}>
+              {label}
+            </a>
+          </li>
+        ))}
         <li className="nav-cv-mobile">
-          <a href="/assets/vincenzo_civale_resume.pdf" download="vincenzo_civale_resume.pdf" onClick={() => setIsMenuOpen(false)}>Resume</a>
+          <a
+            href="/assets/vincenzo_civale_resume.pdf"
+            download="vincenzo_civale_resume.pdf"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Resume
+          </a>
         </li>
         <li className="nav-socials-mobile">
           <Socials />

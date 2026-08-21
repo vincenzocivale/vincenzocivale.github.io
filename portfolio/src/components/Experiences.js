@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
 import './../styles/Experiences.css';
 
-// Dati fittizi delle esperienze
 const experiencesData = [
   {
     company: 'University of Siena',
     title: 'PhD Student',
     duration: '09/2025 - Present',
     details: [
-      'Detail about your role and responsibilities. What did you do here?',
-      'Highlight a key achievement or project you worked on.',
-      'Mention technologies or skills you used in this role (e.g., Python, ML pipelines, etc.).',
+      'Researching machine learning methods for biomedical data, with a focus on multimodal representation learning across imaging and omics.',
+      'Developing and evaluating models for genomics, single-cell data, and computational pathology.',
+      'Working on efficient and reproducible pipelines for biomedical representation learning and model evaluation.',
     ],
   },
   {
-    company: 'Univerisity of Florence',
+    company: 'University of Florence',
     title: 'Research Fellow',
     duration: '09/2023 - 06/2025',
     details: [
-      'Developed deep learning pipeline for medical image segmentation, with performance validated by radiologists.',
-      'Conducted research on neurological behavioral differences between digital natives and immigrants as part of a PRIN (Project of National Interest) project.',
-      'Collaborated on the development of a medical image volume visualization system for Hololens2',
+      'Developed deep learning pipelines for medical image segmentation, with performance evaluated in collaboration with radiologists.',
+      'Conducted research on neurological behavioral differences between digital natives and immigrants as part of a PRIN project.',
+      'Contributed to medical image volume visualization and interoperability tools for HoloLens 2.',
     ],
   },
-  // Duplica questo blocco per ogni tua esperienza
 ];
 
 const Experiences = () => {
@@ -32,30 +30,33 @@ const Experiences = () => {
   return (
     <section id="experiences" className="experiences-section">
       <h2 className="experiences-heading">
-        <span className="experiences-number">03.</span> Experience
+        <span className="experiences-number">04.</span> Experience
       </h2>
 
       <div className="experiences-tab">
-        {/* Tab sinistro (elenco aziende) */}
-        <div className="tab-list">
-          {experiencesData.map((experience, index) => (
+        <div className="tab-list" role="tablist" aria-label="Professional experience">
+          {experiencesData.map((experience) => (
             <button
-              key={index}
+              key={experience.company}
               className={`tab-button ${selectedExperience.company === experience.company ? 'active' : ''}`}
               onClick={() => setSelectedExperience(experience)}
+              role="tab"
+              aria-selected={selectedExperience.company === experience.company}
             >
               {experience.company}
             </button>
           ))}
         </div>
 
-        {/* Tab destro (dettagli dell'esperienza) */}
         <div className="tab-content">
-          <h3 className="job-title">{selectedExperience.title} <span className="company-name">@ {selectedExperience.company}</span></h3>
+          <h3 className="job-title">
+            {selectedExperience.title}{' '}
+            <span className="company-name">@ {selectedExperience.company}</span>
+          </h3>
           <p className="job-duration">{selectedExperience.duration}</p>
           <ul className="job-details">
-            {selectedExperience.details.map((detail, index) => (
-              <li key={index}>{detail}</li>
+            {selectedExperience.details.map((detail) => (
+              <li key={detail}>{detail}</li>
             ))}
           </ul>
         </div>

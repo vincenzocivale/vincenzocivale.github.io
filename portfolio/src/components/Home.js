@@ -4,15 +4,12 @@ import './../styles/Home.css';
 const Home = () => {
   return (
     <section id="home" className="home-section">
-      <p className="intro">👋 Hi, my name is</p>
+      <p className="intro">Biomedical engineering × machine learning</p>
       <h1 className="name">Vincenzo Yuto Civale</h1>
-      <h2 className="title">Biomedical Engineer</h2>
+      <h2 className="title">Machine Learning Researcher</h2>
       <p className="description">
-        PhD researcher developing multimodal machine learning methods for healthcare applications, combining bio-imaging and omics data to build interpretable, adoption-ready clinical tools.
+        PhD researcher building efficient and interpretable machine learning systems for biomedical data, with a focus on bioimaging, genomics, single-cell data, and multimodal learning.
       </p>
-      <div className="dna-background-svg">
-        <img src="/assets/images/dna.svg" alt="DNA Structure" />
-      </div>
     </section>
   );
 };

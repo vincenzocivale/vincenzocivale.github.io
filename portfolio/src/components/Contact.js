@@ -5,13 +5,13 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <h2 className="contact-heading">
-        <span className="contact-number">04.</span> Get In Touch
+        <span className="contact-number">05.</span> Contact
       </h2>
       <p className="contact-text">
-        I'm always looking for new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out to me!
+        I am interested in research collaborations and engineering opportunities at the intersection of machine learning and biomedicine. The best way to reach me is by email.
       </p>
-      <div className="contact-links"> {/* Questo div ora conterrà solo il pulsante */}
-        <a href="mailto:civalevincenzoyuto@gmail.com" className="contact-button">Say Hello</a>
+      <div className="contact-links">
+        <a href="mailto:civalevincenzoyuto@gmail.com" className="contact-button">Get in touch</a>
       </div>
     </section>
   );

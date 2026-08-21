@@ -16,3 +16,41 @@
 .footer a:hover {
   filter: brightness(1.2);
 }
+
+/* Desktop keeps the fixed side rail. */
+.footer-socials {
+  display: none;
+}
+
+/*
+ * On portrait / near-portrait screens, move social links into the normal
+ * document flow so they never overlap the content.
+ */
+@media (max-width: 768px), (max-aspect-ratio: 4 / 3) {
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-socials .socials-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .footer-socials .socials-list::after {
+    display: none;
+  }
+
+  .footer-socials .socials-list li {
+    margin: 0;
+  }
+
+  .footer-socials .socials-list li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
+  }
+}
