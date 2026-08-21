@@ -1,102 +1,74 @@
-README.md
+# Vincenzo Civale — Portfolio
 
-Progetto: Portfolio Personale
+Personal research and engineering portfolio built as a statically rendered site.
 
-Scopo del Progetto
-Questo repository contiene il codice per il mio sito web portfolio personale. Lo scopo è presentare il mio percorso professionale come ingegnere biomedico specializzato in machine learning e bioinformatica, mettendo in evidenza i miei progetti più significativi e il mio prossimo percorso di dottorato.
+## Stack
 
-Il design si ispira a un approccio minimalista e professionale, con un'esperienza di navigazione intuitiva a pagina singola e un focus sulla chiarezza dei contenuti, come da questo riferimento.
+- Astro 7
+- TypeScript
+- Vanilla CSS
+- npm
+- GitHub Actions
+- GitHub Pages
 
-Tecnologie Utilizzate
+The site ships static HTML and CSS by default. Client-side JavaScript is limited
+to the interactions that require it, currently the responsive navigation and
+experience tabs.
 
-Il progetto è una Single-Page Application (SPA) creata con React e i suoi pacchetti standard. Per il design e l'organizzazione, si è puntato su una soluzione pulita e scalabile.
+## Requirements
 
-    Linguaggi: HTML, CSS, JavaScript (ES6+)
+- Node.js 24 recommended
+- npm
 
-    Framework/Librerie: React.js
+The expected Node version is also declared in `.nvmrc`.
 
-    Stilizzazione: CSS puro (con media queries per la responsività)
+## Local development
 
-    Gestione Pacchetti: npm
+```bash
+npm install
+npm run dev
+```
 
-Stato del Progetto
+Astro serves the site at `http://localhost:4321` by default.
 
-Il progetto è attualmente in fase di sviluppo. Le sezioni principali sono state create, ma richiedono ancora una completa personalizzazione e l'aggiunta dei contenuti finali.
+## Validation
 
-Componenti Sviluppati:
+Run the complete local validation before committing:
 
-    Navbar.js: Componente della barra di navigazione.
+```bash
+npm run check
+npm run build
+npm run format:check
+```
 
-        Stato: Funzionale e responsivo. I link sono impostati per il "smooth scrolling".
+The production build is generated in `dist/` and is not committed.
 
-    Home.js: La sezione iniziale del sito.
+## Deployment
 
-        Stato: Funzionale. Richiede la sostituzione dei placeholder con i tuoi dati personali.
+GitHub Actions builds and deploys the site to GitHub Pages from
+`refactored_main`.
 
-    About.js: La sezione "Chi sono".
+In the repository settings, GitHub Pages must use:
 
-        Stato: Funzionale. Il layout è pronto e responsivo. C'è un problema noto dove l'immagine non viene nascosta correttamente su schermi piccoli (da rivedere la specificità del CSS). Richiede la sostituzione dei placeholder con il tuo testo e la tua immagine.
+```text
+Settings → Pages → Build and deployment → Source → GitHub Actions
+```
 
-    Projects.js: La sezione dedicata ai progetti.
+No generated website bundle is intended to be committed once the migration to
+Actions-based deployment is complete.
 
-        Stato: Sviluppo iniziale completato. Il layout per una singola "card" di progetto è pronto e responsivo. L'alternanza delle card è gestita automaticamente.
+## Structure
 
-Cosa Manca (Prossimi Passi)
-
-    Completamento della Sezione Progetti:
-
-        Duplicare il blocco project-card per ogni progetto.
-
-        Aggiungere contenuti (titoli, descrizioni, tecnologie) e immagini per ogni progetto.
-
-    Creazione della Sezione Contatti:
-
-        Creare un nuovo componente Contact.js.
-
-        Aggiungere un modulo di contatto o i link ai tuoi profili (LinkedIn, email, GitHub, ecc.).
-
-    Animazioni:
-
-        Aggiungere animazioni di ingresso per gli elementi (es. fade-in, slide-in) per migliorare l'esperienza utente.
-
-    Immagini e Icone:
-
-        Aggiungere tutte le immagini dei progetti e le icone sociali/link nella cartella public/assets/images.
-
-    Personalizzazione Finale:
-
-        Sostituire tutti i testi placeholder e i link con le tue informazioni personali.
-
-    Ottimizzazione e Deploy:
-
-        Comprimere le immagini per ottimizzare i tempi di caricamento.
-
-        Eseguire il build del progetto con npm run build.
-
-        Deployare il sito su una piattaforma di hosting (es. Netlify, Vercel, GitHub Pages).
-
-Avviare il Progetto in Locale
-
-Per avviare l'applicazione in locale, assicurati di avere Node.js e npm installati.
-
-    Clonare il repository:
-    git clone https://aws.amazon.com/it/what-is/repo/
-
-    Entrare nella cartella del progetto:
-    cd [nome della cartella]
-
-    Installare le dipendenze:
-    npm install
-
-    Avviare il server di sviluppo:
-    npm start
-
-Il tuo sito sarà visibile su http://localhost:3000.
-
-La repo riguarda un blog personale da utilizzare come mio portfolio in cui pubblicare i miei lavori come ricercatore in ingegneria biomedica, ed aumentare le possiiblità di  essere assunto da una FAANG. Non mi interessano effetti particolari ma che sia veloce, minimal e bello. Al momento non mi ricordo a che punto ero con lo sviluppo in quanto è un paio di mesi che non lo prendo in mano. Potresti analizzare le componenti principali dello stato attuale, identificando cosa manca da implementare per avere una prima  versione funzionante, da rifinire in seguito. Se mi ricordassi anche come visualizzare il sito su VSCode o sul browser mi faresti una mano 
-
-
-
-
-
-
+```text
+portfolio/
+├── public/              # static files and media
+├── src/
+│   ├── components/      # Astro components
+│   ├── data/            # typed project/publication/experience data
+│   ├── layouts/         # document layouts
+│   ├── pages/           # routes
+│   └── styles/          # vanilla CSS
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```

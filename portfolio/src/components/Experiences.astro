@@ -1,0 +1,81 @@
+---
+import { experiences } from '../data/experiences';
+import '../styles/Experiences.css';
+---
+
+<section id="experiences" class="experiences-section">
+  <h2 class="experiences-heading">
+    <span class="experiences-number">04.</span> Experience
+  </h2>
+
+  <div class="experiences-tab" data-experiences>
+    <div class="tab-list" role="tablist" aria-label="Professional experience">
+      {
+        experiences.map((experience, index) => (
+          <button
+            id={`experience-tab-${index}`}
+            class:list={['tab-button', { active: index === 0 }]}
+            type="button"
+            role="tab"
+            aria-selected={index === 0 ? 'true' : 'false'}
+            aria-controls={`experience-panel-${index}`}
+            data-experience-tab={index}
+          >
+            {experience.company}
+          </button>
+        ))
+      }
+    </div>
+
+    <div>
+      {
+        experiences.map((experience, index) => (
+          <div
+            id={`experience-panel-${index}`}
+            class="tab-content"
+            role="tabpanel"
+            aria-labelledby={`experience-tab-${index}`}
+            data-experience-panel={index}
+            hidden={index !== 0}
+          >
+            <h3 class="job-title">
+              {experience.title}{' '}
+              <span class="company-name">@ {experience.company}</span>
+            </h3>
+            <p class="job-duration">{experience.duration}</p>
+            <ul class="job-details">
+              {experience.details.map((detail) => (
+                <li>{detail}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const root = document.querySelector('[data-experiences]');
+
+  if (root) {
+    const tabs = Array.from(root.querySelectorAll('[data-experience-tab]'));
+    const panels = Array.from(root.querySelectorAll('[data-experience-panel]'));
+
+    const selectExperience = (selectedIndex: number) => {
+      tabs.forEach((tab, index) => {
+        const isSelected = index === selectedIndex;
+        tab.classList.toggle('active', isSelected);
+        tab.setAttribute('aria-selected', String(isSelected));
+      });
+
+      panels.forEach((panel, index) => {
+        panel.toggleAttribute('hidden', index !== selectedIndex);
+      });
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectExperience(index));
+    });
+  }
+</script>

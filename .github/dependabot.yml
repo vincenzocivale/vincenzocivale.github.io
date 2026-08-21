@@ -1,0 +1,17 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /portfolio
+    schedule:
+      interval: monthly
+    groups:
+      astro-tooling:
+        patterns:
+          - astro
+          - "@astrojs/*"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

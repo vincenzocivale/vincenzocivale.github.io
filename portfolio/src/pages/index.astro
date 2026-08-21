@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Home from '../components/Home.astro';
+import Projects from '../components/Projects.astro';
+import Publications from '../components/Publications.astro';
+import About from '../components/About.astro';
+import Experiences from '../components/Experiences.astro';
+import Contact from '../components/Contact.astro';
+import SideElements from '../components/SideElements.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout>
+  <Navbar />
+  <SideElements />
+
+  <main>
+    <div class="content-wrapper">
+      <Home />
+    </div>
+    <div class="section-separator"></div>
+
+    <div class="content-wrapper">
+      <Projects />
+    </div>
+    <div class="section-separator"></div>
+
+    <div class="content-wrapper">
+      <Publications />
+    </div>
+    <div class="section-separator"></div>
+
+    <div class="content-wrapper">
+      <About />
+    </div>
+    <div class="section-separator"></div>
+
+    <div class="content-wrapper">
+      <Experiences />
+    </div>
+    <div class="section-separator"></div>
+
+    <div class="content-wrapper">
+      <Contact />
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

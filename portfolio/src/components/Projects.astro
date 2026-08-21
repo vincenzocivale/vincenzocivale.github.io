@@ -1,0 +1,35 @@
+---
+import { projects } from '../data/projects';
+import '../styles/Projects.css';
+---
+
+<section id="projects" class="projects-section">
+  <h2 class="projects-heading">
+    <span class="projects-number">01.</span> Selected Work
+  </h2>
+
+  {
+    projects.map((project) => (
+      <div class="project-card">
+        <div class="project-image-container">
+          <img
+            src={project.image.src}
+            alt={project.image.alt}
+            class="project-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="project-content">
+          <p class="project-label">{project.label}</p>
+          <h3 class="project-title">{project.title}</h3>
+          <p class="project-description">{project.description}</p>
+          <ul class="project-tech-list">
+            {project.technologies.map((technology) => (
+              <li>{technology}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
+  }
+</section>

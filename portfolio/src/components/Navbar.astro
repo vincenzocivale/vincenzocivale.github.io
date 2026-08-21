@@ -1,0 +1,117 @@
+---
+import Socials from './Socials.astro';
+import { navigationItems } from '../data/navigation';
+import '../styles/Navbar.css';
+---
+
+<nav class="navbar" data-navbar>
+  <div class="nav-logo"></div>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Toggle menu"
+    aria-expanded="false"
+    aria-controls="mobile-navigation"
+    data-menu-toggle
+  >
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <ul class="nav-links">
+    {
+      navigationItems.map(({ label, target }) => (
+        <li>
+          <a href={`#${target}`}>{label}</a>
+        </li>
+      ))
+    }
+    <li class="nav-cv">
+      <a
+        href="/assets/vincenzo_civale_resume.pdf"
+        download="vincenzo_civale_resume.pdf"
+      >
+        Resume
+      </a>
+    </li>
+  </ul>
+
+  <ul id="mobile-navigation" class="nav-links-mobile" data-mobile-navigation>
+    {
+      navigationItems.map(({ label, target }) => (
+        <li>
+          <a href={`#${target}`}>{label}</a>
+        </li>
+      ))
+    }
+    <li class="nav-cv-mobile">
+      <a
+        href="/assets/vincenzo_civale_resume.pdf"
+        download="vincenzo_civale_resume.pdf"
+      >
+        Resume
+      </a>
+    </li>
+    <li class="nav-socials-mobile">
+      <Socials />
+    </li>
+  </ul>
+</nav>
+
+<div class="overlay" data-navigation-overlay></div>
+
+<script>
+  const navbar = document.querySelector('[data-navbar]');
+  const menuToggle = document.querySelector('[data-menu-toggle]');
+  const mobileNavigation = document.querySelector('[data-mobile-navigation]');
+  const overlay = document.querySelector('[data-navigation-overlay]');
+  const hamburgerLines = Array.from(
+    document.querySelectorAll('.hamburger-line'),
+  );
+
+  const setMenuOpen = (isOpen: boolean) => {
+    mobileNavigation?.classList.toggle('open', isOpen);
+    overlay?.classList.toggle('open', isOpen);
+    hamburgerLines.forEach((line) => line.classList.toggle('open', isOpen));
+    menuToggle?.setAttribute('aria-expanded', String(isOpen));
+  };
+
+  const isMenuOpen = () =>
+    mobileNavigation?.classList.contains('open') ?? false;
+
+  menuToggle?.addEventListener('click', () => {
+    setMenuOpen(!isMenuOpen());
+  });
+
+  overlay?.addEventListener('click', () => setMenuOpen(false));
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+
+      if (!href || href === '#') return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    });
+  });
+
+  const updateNavbar = () => {
+    navbar?.classList.toggle('scrolled', window.scrollY > 100);
+  };
+
+  updateNavbar();
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && isMenuOpen()) {
+      setMenuOpen(false);
+    }
+  });
+</script>

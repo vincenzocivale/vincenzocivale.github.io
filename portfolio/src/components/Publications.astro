@@ -1,0 +1,60 @@
+---
+import { publications } from '../data/publications';
+import '../styles/Publications.css';
+---
+
+<section id="publications" class="publications-section">
+  <h2 class="publications-heading">
+    <span class="publications-number">02.</span> Publications
+  </h2>
+
+  <div class="publications-list">
+    {
+      publications.map((publication) => (
+        <article class="publication-row">
+          <div class="publication-year">{publication.year}</div>
+
+          <div class="publication-main">
+            <h3 class="publication-title">{publication.title}</h3>
+
+            <p class="publication-authors">
+              {publication.authors.map((author, index) => (
+                <>
+                  {index > 0 && ', '}
+                  <span
+                    class={author.self ? 'publication-author-self' : undefined}
+                  >
+                    {author.name}
+                  </span>
+                </>
+              ))}
+            </p>
+
+            <p class="publication-venue">{publication.venue}</p>
+          </div>
+
+          <div
+            class="publication-links"
+            aria-label={`Links for ${publication.title}`}
+          >
+            {publication.links.map((link) => (
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.label} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="publications-footer">
+    <a
+      href="https://scholar.google.com/citations?user=a6eFtBoAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Google Scholar <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>
