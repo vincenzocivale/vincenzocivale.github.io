@@ -31,7 +31,7 @@
 }
 
 .publication-year {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   line-height: 1.5;
@@ -54,6 +54,14 @@
   color: var(--primary-color);
 }
 
+/* The keyword of the title is underlined in the accent colour; the venue is written in it. */
+.publication-title mark {
+  background: none;
+  color: inherit;
+  text-decoration: underline 2px var(--primary-color);
+  text-underline-offset: 4px;
+}
+
 .publication-authors {
   margin: 0 0 0.35rem;
   color: var(--text-color);
@@ -71,6 +79,17 @@
   color: var(--job-duration-color);
   font-family: var(--font-mono);
   font-size: var(--font-size-xxs);
+}
+
+.publication-venue-name {
+  color: var(--primary-color);
+}
+
+.publication-summary {
+  margin: 0.75rem 0 0;
+  color: var(--text-color);
+  font-size: var(--font-size-xs);
+  line-height: 1.55;
 }
 
 .publication-links {

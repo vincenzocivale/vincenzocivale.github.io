@@ -1,134 +1,75 @@
-.experiences-section {
-  max-width: 900px;
+/* The timeline under the bio of the About section; rows follow the publication list. */
+.experiences {
+  max-width: 1000px;
+  margin-top: 4rem;
 }
 
 .experiences-heading {
-  display: flex;
-  align-items: center;
-  font-size: var(--font-size-lg);
+  margin: 0 0 1.5rem;
   color: var(--secondary-color);
-  margin-bottom: 3rem;
+  font-size: var(--font-size-md);
 }
 
-.experiences-number {
+.experiences-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border-color);
+  list-style: none;
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 1.75rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job-duration {
+  margin: 0;
   color: var(--primary-color);
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
-  margin-right: 0.5rem;
-}
-
-.experiences-tab {
-  display: flex;
-}
-
-.tab-list {
-  display: flex;
-  flex-direction: column;
-  min-width: 150px;
-  border-left: 2px solid transparent; /* Make border transparent for image */
-  border-image: var(--gradient-border) 1; /* Apply stronger gradient */
-  margin-right: 2rem;
-}
-
-.tab-button {
-  background-color: transparent;
-  color: var(--text-color);
-  border: none;
-  border-left: 2px solid transparent;
-  padding: 1rem;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-size: var(--font-size-xs);
-}
-
-.tab-button.active {
-  color: var(--primary-color);
-  background-color: var(--card-background);
-  border-left: 2px solid transparent; /* Make border transparent for image */
-  border-image: var(--gradient-border) 1; /* Apply stronger gradient */
-}
-
-.tab-button:hover {
-  background-color: var(--card-background);
-}
-
-.tab-content {
-  flex-grow: 1;
+  line-height: 1.5;
 }
 
 .job-title {
-  font-size: var(--font-size-sm);
+  margin: 0;
   color: var(--secondary-color);
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .company-name {
   color: var(--primary-color);
 }
 
-.job-duration {
-  font-size: var(--font-size-xxs);
-  color: var(--job-duration-color);
-  font-family: var(--font-mono);
-  margin-bottom: 1rem;
-}
-
 .job-details {
-  list-style-type: none;
+  margin: 0.75rem 0 0;
   padding: 0;
   color: var(--text-color);
+  list-style: none;
 }
 
 .job-details li {
   position: relative;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
+  line-height: 1.55;
 }
 
 .job-details li::before {
-  content: "▹";
+  content: '▹';
   position: absolute;
   left: 0;
   color: var(--primary-color);
 }
 
-/* Media Query per la responsività */
-@media (max-width: 768px) {
-  .experiences-section {
-    padding: var(--section-padding-mobile);
-  }
-  
-  .experiences-tab {
-    flex-direction: column;
-  }
-
-  .tab-list {
-    flex-direction: row;
-    border-left: none;
-    border-bottom: 2px solid var(--border-color);
-    margin-right: 0;
-    margin-bottom: 1rem;
-    overflow-x: auto;
-  }
-
-  .tab-button {
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    padding: 0.75rem; /* Reduced padding for mobile tabs */
-  }
-  
-  .tab-button.active {
-    border-left: none;
-    border-bottom: 2px solid var(--primary-color);
-  }
-
-  .job-title {
-    font-size: var(--font-size-md); /* Increased font size for readability */
-  }
-
-  .company-name {
-    font-size: var(--font-size-md); /* Increased font size for readability */
+@media (max-width: 700px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 }

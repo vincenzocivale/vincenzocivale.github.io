@@ -34,29 +34,6 @@
   font-size: var(--font-size-sm);
 }
 
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
-  gap: 0 10px;
-  padding: 0;
-  margin-top: 1.5rem;
-  list-style: none;
-}
-
-.skills-list li {
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  color: var(--text-color);
-  font-size: var(--font-size-xs);
-}
-
-.skills-list li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--primary-color);
-}
 /* About.css */
 
 .about-image-container {
@@ -72,31 +49,7 @@
   border-radius: 4px;
   filter: contrast(1);
   transition: all 0.3s ease-in-out;
-  z-index: 1; /* Abbassato per far sì che l'SVG la sovrasti */
   position: relative;
-}
-
-.profile-text-svg {
-  position: absolute;
-   top: calc(100px + 250px); 
-  right: 0;
-  transform: translate(50%, -50%);
-  z-index: 3;
-  width: 50px; 
-  height: 300px;
-}
-
-/* Stile per il testo dentro l'SVG */
-.svg-text-outline {
-  font-family: var(--font-sans);
-  font-size: 50px;
-  fill: var(--secondary-color); /* Colore del riempimento */
-
-  stroke: var(--border-color); /* Colore del contorno (stesso del riempimento per spessore) */
-  stroke-width: 4px; /* Larghezza del contorno per renderlo più spesso */
-  
-  writing-mode: vertical-rl;
-  text-orientation: upright;
 }
 
 @media (max-width: 768px) {
@@ -106,17 +59,9 @@
     gap: 2rem;
   }
 
-  .skills-list {
-    grid-template-columns: 1fr; /* Single column for skills on mobile */
-  }
-
   .about-image-container {
     max-width: 200px; /* Adjust size for mobile */
     margin-bottom: 2rem; /* Space between image and text */
     display: block; /* Ensure it's not hidden */
-  }
-
-  .profile-text-svg {
-    display: none; /* Hide the SVG text on mobile */
   }
 }

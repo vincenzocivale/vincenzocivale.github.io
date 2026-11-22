@@ -13,7 +13,7 @@ Personal research and engineering portfolio built as a statically rendered site.
 
 The site ships static HTML and CSS by default. Client-side JavaScript is limited
 to the interactions that require it, currently the responsive navigation and
-experience tabs.
+the hero animation.
 
 ## Requirements
 
