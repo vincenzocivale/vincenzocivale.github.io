@@ -3,8 +3,10 @@ import { experiences } from '../data/experiences';
 import '../styles/Experiences.css';
 ---
 
-<div class="experiences">
-  <h3 class="experiences-heading">Experience and education</h3>
+<section id="experience" class="experiences-section">
+  <h2 class="experiences-heading">
+    <span class="experiences-number">03.</span> Experience and education
+  </h2>
 
   <ol class="experiences-list">
     {
@@ -12,10 +14,10 @@ import '../styles/Experiences.css';
         <li class="experience-row">
           <p class="job-duration">{experience.duration}</p>
           <div>
-            <h4 class="job-title">
+            <h3 class="job-title">
               {experience.title}{' '}
               <span class="company-name">@ {experience.company}</span>
-            </h4>
+            </h3>
             {experience.details.length > 0 && (
               <ul class="job-details">
                 {experience.details.map((detail) => (
@@ -28,4 +30,4 @@ import '../styles/Experiences.css';
       ))
     }
   </ol>
-</div>
+</section>

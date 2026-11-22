@@ -12,9 +12,7 @@ export const experiences: Experience[] = [
     title: 'PhD Student',
     duration: '2025 – Present',
     details: [
-      'Researching machine learning methods for biomedical data, with a focus on multimodal representation learning across imaging and omics.',
-      'Developing and evaluating models for genomics, single-cell data, and computational pathology.',
-      'Working on efficient and reproducible pipelines for biomedical representation learning and model evaluation.',
+      'Evaluating what foundation models for DNA, single-cell and histopathology data learn, with first-author papers at NeurIPS 2026 and the ICLR 2026 LMRL workshop.',
     ],
   },
   {

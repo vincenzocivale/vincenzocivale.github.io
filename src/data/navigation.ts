@@ -6,5 +6,6 @@ export interface NavigationItem {
 export const navigationItems: NavigationItem[] = [
   { label: 'Publications', target: 'publications' },
   { label: 'About', target: 'about' },
+  { label: 'Experience', target: 'experience' },
   { label: 'Contact', target: 'contact' },
 ];

@@ -1,5 +1,6 @@
 .publications-section {
   max-width: 1000px;
+  margin-left: 0; /* same left edge as the hero and the About section */
 }
 
 .publications-heading {

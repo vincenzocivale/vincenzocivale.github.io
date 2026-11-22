@@ -89,6 +89,15 @@ section {
   margin: 0 auto;
 }
 
+/* Below 1360px the fixed social rail sits where the text would start: keep it 112px in, like the hero. */
+@media (min-width: 769px) {
+  .publications-section,
+  .about-section,
+  .experiences-section {
+    padding-left: clamp(0px, 680px - 50vw, 5rem);
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;

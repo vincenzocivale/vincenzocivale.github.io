@@ -5,7 +5,7 @@
   align-items: flex-start;
   min-height: 92vh;
   max-width: 900px;
-  margin-left: 0; /* same left edge as the Work and About sections */
+  margin-left: 0; /* same left edge as the sections below */
   /* Below 1360px that edge would run under the fixed social rail: keep the text 112px in. */
   padding-left: clamp(0px, 680px - 50vw, 5rem);
 }

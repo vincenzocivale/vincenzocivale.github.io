@@ -17,14 +17,8 @@
   margin-right: 0.5rem;
 }
 
-.about-content {
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
-}
-
 .about-text {
-  flex: 2;
+  max-width: 770px; /* the line length the text had beside the photo */
 }
 
 .about-text p {
@@ -32,36 +26,4 @@
   line-height: 1.6;
   color: var(--text-color);
   font-size: var(--font-size-sm);
-}
-
-/* About.css */
-
-.about-image-container {
-  flex: 1;
-  max-width: 300px;
-  position: relative;
-  border-radius: 4px;
-}
-
-/* Stili per l'immagine */
-.profile-image {
-  width: 100%;
-  border-radius: 4px;
-  filter: contrast(1);
-  transition: all 0.3s ease-in-out;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .about-image-container {
-    max-width: 200px; /* Adjust size for mobile */
-    margin-bottom: 2rem; /* Space between image and text */
-    display: block; /* Ensure it's not hidden */
-  }
 }

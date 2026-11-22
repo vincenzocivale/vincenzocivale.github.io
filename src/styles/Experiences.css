@@ -1,13 +1,22 @@
-/* The timeline under the bio of the About section; rows follow the publication list. */
-.experiences {
+/* Positions and degrees; rows follow the publication list. */
+.experiences-section {
   max-width: 1000px;
-  margin-top: 4rem;
+  margin-left: 0; /* same left edge as the hero and the About section */
 }
 
 .experiences-heading {
-  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-lg);
   color: var(--secondary-color);
-  font-size: var(--font-size-md);
+  margin-bottom: 3rem;
+}
+
+.experiences-number {
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  margin-right: 0.5rem;
 }
 
 .experiences-list {
