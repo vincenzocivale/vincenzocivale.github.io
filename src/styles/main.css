@@ -2,7 +2,12 @@
 
 /* Dark Theme (PyCharm-inspired) - Default */
 :root {
-  --primary-color: #59A2DE; /* Accent color from PyCharm */
+  /*
+   * Two tones of the PyCharm accent. Thin strokes render darker than a filled area,
+   * so text, borders and small marks take the lighter one to look like the same blue.
+   */
+  --primary-color: #74B9F3; /* text, borders, small marks */
+  --primary-fill: #59A2DE; /* filled areas and large type */
   --secondary-color: #E0E0E0; /* Lighter secondary text color for better contrast */
   --text-color: #A9B7C6; /* Standard text color, improved contrast */
   --background-color: #20232A; /* Darker background, similar to Google's dark modes */
@@ -14,9 +19,7 @@
   --job-duration-color: #B0BEC5;
   --gradient-border: linear-gradient(to right, var(--primary-color), #407BAA); /* Stronger gradient for borders */
 
-  /* Tipografia - Font Family */
-  --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;
-  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  /* Tipografia - Font Family: --font-sans (Inter) and --font-mono (JetBrains Mono) come from astro.config.mjs */
   
   /* Tipografia - Dimensioni Font Fluid-Responsive */
   --font-size-xxs: 0.8rem; /* Rimane fisso per leggibilità minima */

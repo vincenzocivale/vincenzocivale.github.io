@@ -5,6 +5,9 @@
   align-items: flex-start;
   min-height: 92vh;
   max-width: 900px;
+  margin-left: 0; /* same left edge as the Work and About sections */
+  /* Below 1360px that edge would run under the fixed social rail: keep the text 112px in. */
+  padding-left: clamp(0px, 680px - 50vw, 5rem);
 }
 
 .home-section .intro {
@@ -24,9 +27,14 @@
 }
 
 .home-section .title {
-  margin: 0.5rem 0 0;
-  color: var(--text-color);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  width: fit-content; /* the gradient spans the words, not the column */
+  margin: 0.6rem 0 0;
+  background: linear-gradient(90deg, var(--primary-fill), #9fd0f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: clamp(1.75rem, 4.2vw, 3rem);
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.025em;
 }
@@ -39,10 +47,153 @@
   line-height: 1.7;
 }
 
+/* Underlined: inside a paragraph, colour alone does not mark a link. */
+.home-section .description a {
+  color: var(--primary-color);
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.75rem;
+  margin-top: 2.5rem;
+}
+
+/* The Contact button, filled: the one main action of the first screen. */
+.hero-actions .contact-button,
+.hero-actions .contact-button:hover {
+  padding: 1rem 1.5rem;
+  background-color: var(--primary-fill);
+  color: var(--background-color);
+  font-weight: 600;
+}
+
+.hero-actions .contact-button:hover {
+  background-color: #7bb8ea;
+}
+
+.hero-secondary {
+  padding: 0.75rem 0; /* 44px touch target */
+  color: var(--secondary-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  transition: color 0.2s ease-in-out;
+}
+
+.hero-secondary:hover {
+  color: var(--primary-color);
+}
+
+/*
+ * The DNA from the December 2025 version of the site, in the top-right corner over a faint glow.
+ * The canvas redraws the dots of dna.svg turning in 3D (script in Home.astro).
+ */
+.dna-background-svg {
+  position: absolute;
+  top: 4rem; /* just below the navbar */
+  right: max(0px, (100vw - 2560px) / 2); /* stays near the text on ultra-wide screens */
+  z-index: -1; /* behind the text */
+  width: min(52vw, 84vh); /* 84vh: on 16:9 screens the turning helix would pass the end of the hero */
+  /* The canvas keeps an empty margin for the rotation; lifting it by that margin starts the helix right under the navbar. */
+  transform: translateY(-5%);
+  pointer-events: none;
+  background: radial-gradient(
+    closest-side,
+    rgba(89, 162, 222, 0.18),
+    transparent 75%
+  );
+  /* Fades out towards the headline on the left and under the email rail on the right. */
+  mask-image: linear-gradient(
+    to left,
+    transparent 3%,
+    #000 16%,
+    #000 45%,
+    transparent 82%
+  );
+}
+
+.dna-background-svg canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1; /* the turning helix needs a square */
+}
+
+/* Without JavaScript: the drawing itself, which the file stores mirrored. */
+.dna-background-svg img {
+  display: block;
+  width: 100%;
+  transform: scaleX(-1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* One entrance for the whole hero: the lines rise in sequence, the DNA fades in. */
+  .hero-text > * {
+    animation: hero-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero-text > :nth-child(2) {
+    animation-delay: 0.08s;
+  }
+
+  .hero-text > :nth-child(3) {
+    animation-delay: 0.16s;
+  }
+
+  .hero-text > :nth-child(4) {
+    animation-delay: 0.24s;
+  }
+
+  .hero-text > :nth-child(5) {
+    animation-delay: 0.32s;
+  }
+
+  .dna-background-svg {
+    animation: hero-fade 1.2s ease-out 0.2s both;
+  }
+
+  .home-section [data-rotate]::after {
+    content: '▍';
+    margin-left: 0.1em;
+    animation: hero-caret 1s steps(1) infinite;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Below this width the helix would run across the name, so it is dropped (and never loaded). */
+@media (max-width: 1240px) {
+  .dna-background-svg {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .home-section {
     min-height: 85vh;
     padding: var(--section-padding-mobile);
+    padding-top: 6rem; /* clears the fixed navbar now that the hero is taller */
     align-items: flex-start;
     text-align: left;
   }
